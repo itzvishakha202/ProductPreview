@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductPreview</title>
+    <style>
+        #main-product-image{
+         height: 400px;
+         width: 400px;
+         object-fit: cover;
+         border: 1px solid gray;
+         border-radius: 20px;
+         box-shadow: 0 10px 0 10px rgb(66, 65, 65); 
+         margin: 20px auto;
+         display: block;
+        }
+        .product-images-container{
+           display: flex;
+           justify-content: center;
+        }
+        .product-image{
+          height: 70px;
+          width: 70px;   
+          object-fit: cover;
+          border: 1px solid black;
+          border-radius: 5px;
+          margin: 10px;
+          cursor: pointer; 
+        }
+        </style>
+</head>
+<body>
+    <img src="1.jpeg" id="main-product-image">
+
+    <div class="product-images-container">
+        <img src="1.jpeg" class="product-image" onclick="changeImage(1)">
+        <img src="2.jpeg" class="product-image" onclick="changeImage(2)">
+        <img src="3.webp" class="product-image" onclick="changeImage(3)">
+        </div>
+        <script>
+           function changeImage(num){
+
+             const mainImage = document.getElementById('main-product-image');
+             if(num==1)
+             {
+                mainImage.src = "1.jpeg";
+             }else if(num==2)
+             {
+                mainImage.src = "2.jpeg"; 
+             }else if(num==3)
+             {
+                mainImage.src = "3.webp"; 
+             }
+           }
+         </script>
+      
+</body>
+</html>
